@@ -1,4 +1,4 @@
-import 'package:drift/drift.dart';
+﻿import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
 import 'package:tankly/core/constants.dart' show Fuel;
 import 'package:tankly/domain/models/refuel.dart';
@@ -16,7 +16,11 @@ import 'tables/trip_points_table.dart';
 import 'tables/trips_table.dart';
 import 'tables/vehicles_table.dart';
 
+
 part 'app_database.g.dart';
+
+
+
 
 /// The local database. Source of truth for everything the rider owns.
 ///
@@ -35,7 +39,7 @@ part 'app_database.g.dart';
     TripPoints,
     OdometerChecks,
     Reminders,
-    SyncState,
+    SyncStates,
     AppSettings,
   ],
 )

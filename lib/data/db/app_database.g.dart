@@ -6228,12 +6228,12 @@ class RemindersCompanion extends UpdateCompanion<Reminder> {
   }
 }
 
-class $SyncStateTable extends SyncState
-    with TableInfo<$SyncStateTable, SyncStateData> {
+class $SyncStatesTable extends SyncStates
+    with TableInfo<$SyncStatesTable, SyncState> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $SyncStateTable(this.attachedDatabase, [this._alias]);
+  $SyncStatesTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
@@ -6303,7 +6303,7 @@ class $SyncStateTable extends SyncState
   static const String $name = 'sync_state';
   @override
   VerificationContext validateIntegrity(
-    Insertable<SyncStateData> instance, {
+    Insertable<SyncState> instance, {
     bool isInserting = false,
   }) {
     final context = VerificationContext();
@@ -6350,9 +6350,9 @@ class $SyncStateTable extends SyncState
   @override
   Set<GeneratedColumn> get $primaryKey => const {};
   @override
-  SyncStateData map(Map<String, dynamic> data, {String? tablePrefix}) {
+  SyncState map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return SyncStateData(
+    return SyncState(
       id: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}id'],
@@ -6377,12 +6377,12 @@ class $SyncStateTable extends SyncState
   }
 
   @override
-  $SyncStateTable createAlias(String alias) {
-    return $SyncStateTable(attachedDatabase, alias);
+  $SyncStatesTable createAlias(String alias) {
+    return $SyncStatesTable(attachedDatabase, alias);
   }
 }
 
-class SyncStateData extends DataClass implements Insertable<SyncStateData> {
+class SyncState extends DataClass implements Insertable<SyncState> {
   final int id;
   final DateTime? lastPulledAt;
   final DateTime? lastPushAt;
@@ -6391,7 +6391,7 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
   /// showing a silent spinner forever.
   final String? lastError;
   final DateTime? lastErrorAt;
-  const SyncStateData({
+  const SyncState({
     required this.id,
     this.lastPulledAt,
     this.lastPushAt,
@@ -6417,8 +6417,8 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
     return map;
   }
 
-  SyncStateCompanion toCompanion(bool nullToAbsent) {
-    return SyncStateCompanion(
+  SyncStatesCompanion toCompanion(bool nullToAbsent) {
+    return SyncStatesCompanion(
       id: Value(id),
       lastPulledAt: lastPulledAt == null && nullToAbsent
           ? const Value.absent()
@@ -6435,12 +6435,12 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
     );
   }
 
-  factory SyncStateData.fromJson(
+  factory SyncState.fromJson(
     Map<String, dynamic> json, {
     ValueSerializer? serializer,
   }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
-    return SyncStateData(
+    return SyncState(
       id: serializer.fromJson<int>(json['id']),
       lastPulledAt: serializer.fromJson<DateTime?>(json['lastPulledAt']),
       lastPushAt: serializer.fromJson<DateTime?>(json['lastPushAt']),
@@ -6460,21 +6460,21 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
     };
   }
 
-  SyncStateData copyWith({
+  SyncState copyWith({
     int? id,
     Value<DateTime?> lastPulledAt = const Value.absent(),
     Value<DateTime?> lastPushAt = const Value.absent(),
     Value<String?> lastError = const Value.absent(),
     Value<DateTime?> lastErrorAt = const Value.absent(),
-  }) => SyncStateData(
+  }) => SyncState(
     id: id ?? this.id,
     lastPulledAt: lastPulledAt.present ? lastPulledAt.value : this.lastPulledAt,
     lastPushAt: lastPushAt.present ? lastPushAt.value : this.lastPushAt,
     lastError: lastError.present ? lastError.value : this.lastError,
     lastErrorAt: lastErrorAt.present ? lastErrorAt.value : this.lastErrorAt,
   );
-  SyncStateData copyWithCompanion(SyncStateCompanion data) {
-    return SyncStateData(
+  SyncState copyWithCompanion(SyncStatesCompanion data) {
+    return SyncState(
       id: data.id.present ? data.id.value : this.id,
       lastPulledAt: data.lastPulledAt.present
           ? data.lastPulledAt.value
@@ -6491,7 +6491,7 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
 
   @override
   String toString() {
-    return (StringBuffer('SyncStateData(')
+    return (StringBuffer('SyncState(')
           ..write('id: $id, ')
           ..write('lastPulledAt: $lastPulledAt, ')
           ..write('lastPushAt: $lastPushAt, ')
@@ -6507,7 +6507,7 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is SyncStateData &&
+      (other is SyncState &&
           other.id == this.id &&
           other.lastPulledAt == this.lastPulledAt &&
           other.lastPushAt == this.lastPushAt &&
@@ -6515,14 +6515,14 @@ class SyncStateData extends DataClass implements Insertable<SyncStateData> {
           other.lastErrorAt == this.lastErrorAt);
 }
 
-class SyncStateCompanion extends UpdateCompanion<SyncStateData> {
+class SyncStatesCompanion extends UpdateCompanion<SyncState> {
   final Value<int> id;
   final Value<DateTime?> lastPulledAt;
   final Value<DateTime?> lastPushAt;
   final Value<String?> lastError;
   final Value<DateTime?> lastErrorAt;
   final Value<int> rowid;
-  const SyncStateCompanion({
+  const SyncStatesCompanion({
     this.id = const Value.absent(),
     this.lastPulledAt = const Value.absent(),
     this.lastPushAt = const Value.absent(),
@@ -6530,7 +6530,7 @@ class SyncStateCompanion extends UpdateCompanion<SyncStateData> {
     this.lastErrorAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
-  SyncStateCompanion.insert({
+  SyncStatesCompanion.insert({
     this.id = const Value.absent(),
     this.lastPulledAt = const Value.absent(),
     this.lastPushAt = const Value.absent(),
@@ -6538,7 +6538,7 @@ class SyncStateCompanion extends UpdateCompanion<SyncStateData> {
     this.lastErrorAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
-  static Insertable<SyncStateData> custom({
+  static Insertable<SyncState> custom({
     Expression<int>? id,
     Expression<DateTime>? lastPulledAt,
     Expression<DateTime>? lastPushAt,
@@ -6556,7 +6556,7 @@ class SyncStateCompanion extends UpdateCompanion<SyncStateData> {
     });
   }
 
-  SyncStateCompanion copyWith({
+  SyncStatesCompanion copyWith({
     Value<int>? id,
     Value<DateTime?>? lastPulledAt,
     Value<DateTime?>? lastPushAt,
@@ -6564,7 +6564,7 @@ class SyncStateCompanion extends UpdateCompanion<SyncStateData> {
     Value<DateTime?>? lastErrorAt,
     Value<int>? rowid,
   }) {
-    return SyncStateCompanion(
+    return SyncStatesCompanion(
       id: id ?? this.id,
       lastPulledAt: lastPulledAt ?? this.lastPulledAt,
       lastPushAt: lastPushAt ?? this.lastPushAt,
@@ -6600,7 +6600,7 @@ class SyncStateCompanion extends UpdateCompanion<SyncStateData> {
 
   @override
   String toString() {
-    return (StringBuffer('SyncStateCompanion(')
+    return (StringBuffer('SyncStatesCompanion(')
           ..write('id: $id, ')
           ..write('lastPulledAt: $lastPulledAt, ')
           ..write('lastPushAt: $lastPushAt, ')
@@ -6833,7 +6833,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   late final $TripPointsTable tripPoints = $TripPointsTable(this);
   late final $OdometerChecksTable odometerChecks = $OdometerChecksTable(this);
   late final $RemindersTable reminders = $RemindersTable(this);
-  late final $SyncStateTable syncState = $SyncStateTable(this);
+  late final $SyncStatesTable syncStates = $SyncStatesTable(this);
   late final $AppSettingsTable appSettings = $AppSettingsTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
@@ -6847,7 +6847,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
     tripPoints,
     odometerChecks,
     reminders,
-    syncState,
+    syncStates,
     appSettings,
   ];
 }
@@ -10948,8 +10948,8 @@ typedef $$RemindersTableProcessedTableManager =
       Reminder,
       PrefetchHooks Function({bool vehicleId})
     >;
-typedef $$SyncStateTableCreateCompanionBuilder =
-    SyncStateCompanion Function({
+typedef $$SyncStatesTableCreateCompanionBuilder =
+    SyncStatesCompanion Function({
       Value<int> id,
       Value<DateTime?> lastPulledAt,
       Value<DateTime?> lastPushAt,
@@ -10957,8 +10957,8 @@ typedef $$SyncStateTableCreateCompanionBuilder =
       Value<DateTime?> lastErrorAt,
       Value<int> rowid,
     });
-typedef $$SyncStateTableUpdateCompanionBuilder =
-    SyncStateCompanion Function({
+typedef $$SyncStatesTableUpdateCompanionBuilder =
+    SyncStatesCompanion Function({
       Value<int> id,
       Value<DateTime?> lastPulledAt,
       Value<DateTime?> lastPushAt,
@@ -10967,9 +10967,9 @@ typedef $$SyncStateTableUpdateCompanionBuilder =
       Value<int> rowid,
     });
 
-class $$SyncStateTableFilterComposer
-    extends Composer<_$AppDatabase, $SyncStateTable> {
-  $$SyncStateTableFilterComposer({
+class $$SyncStatesTableFilterComposer
+    extends Composer<_$AppDatabase, $SyncStatesTable> {
+  $$SyncStatesTableFilterComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -11002,9 +11002,9 @@ class $$SyncStateTableFilterComposer
   );
 }
 
-class $$SyncStateTableOrderingComposer
-    extends Composer<_$AppDatabase, $SyncStateTable> {
-  $$SyncStateTableOrderingComposer({
+class $$SyncStatesTableOrderingComposer
+    extends Composer<_$AppDatabase, $SyncStatesTable> {
+  $$SyncStatesTableOrderingComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -11037,9 +11037,9 @@ class $$SyncStateTableOrderingComposer
   );
 }
 
-class $$SyncStateTableAnnotationComposer
-    extends Composer<_$AppDatabase, $SyncStateTable> {
-  $$SyncStateTableAnnotationComposer({
+class $$SyncStatesTableAnnotationComposer
+    extends Composer<_$AppDatabase, $SyncStatesTable> {
+  $$SyncStatesTableAnnotationComposer({
     required super.$db,
     required super.$table,
     super.joinBuilder,
@@ -11068,35 +11068,35 @@ class $$SyncStateTableAnnotationComposer
   );
 }
 
-class $$SyncStateTableTableManager
+class $$SyncStatesTableTableManager
     extends
         RootTableManager<
           _$AppDatabase,
-          $SyncStateTable,
-          SyncStateData,
-          $$SyncStateTableFilterComposer,
-          $$SyncStateTableOrderingComposer,
-          $$SyncStateTableAnnotationComposer,
-          $$SyncStateTableCreateCompanionBuilder,
-          $$SyncStateTableUpdateCompanionBuilder,
+          $SyncStatesTable,
+          SyncState,
+          $$SyncStatesTableFilterComposer,
+          $$SyncStatesTableOrderingComposer,
+          $$SyncStatesTableAnnotationComposer,
+          $$SyncStatesTableCreateCompanionBuilder,
+          $$SyncStatesTableUpdateCompanionBuilder,
           (
-            SyncStateData,
-            BaseReferences<_$AppDatabase, $SyncStateTable, SyncStateData>,
+            SyncState,
+            BaseReferences<_$AppDatabase, $SyncStatesTable, SyncState>,
           ),
-          SyncStateData,
+          SyncState,
           PrefetchHooks Function()
         > {
-  $$SyncStateTableTableManager(_$AppDatabase db, $SyncStateTable table)
+  $$SyncStatesTableTableManager(_$AppDatabase db, $SyncStatesTable table)
     : super(
         TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
-              $$SyncStateTableFilterComposer($db: db, $table: table),
+              $$SyncStatesTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
-              $$SyncStateTableOrderingComposer($db: db, $table: table),
+              $$SyncStatesTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
-              $$SyncStateTableAnnotationComposer($db: db, $table: table),
+              $$SyncStatesTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -11105,7 +11105,7 @@ class $$SyncStateTableTableManager
                 Value<String?> lastError = const Value.absent(),
                 Value<DateTime?> lastErrorAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
-              }) => SyncStateCompanion(
+              }) => SyncStatesCompanion(
                 id: id,
                 lastPulledAt: lastPulledAt,
                 lastPushAt: lastPushAt,
@@ -11121,7 +11121,7 @@ class $$SyncStateTableTableManager
                 Value<String?> lastError = const Value.absent(),
                 Value<DateTime?> lastErrorAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
-              }) => SyncStateCompanion.insert(
+              }) => SyncStatesCompanion.insert(
                 id: id,
                 lastPulledAt: lastPulledAt,
                 lastPushAt: lastPushAt,
@@ -11132,8 +11132,8 @@ class $$SyncStateTableTableManager
           withReferenceMapper: (p0) => p0
               .map(
                 (e) => (
-                  e.readTable<$SyncStateTable, SyncStateData>(table),
-                  BaseReferences<_$AppDatabase, $SyncStateTable, SyncStateData>(
+                  e.readTable<$SyncStatesTable, SyncState>(table),
+                  BaseReferences<_$AppDatabase, $SyncStatesTable, SyncState>(
                     db,
                     table,
                     e,
@@ -11146,21 +11146,18 @@ class $$SyncStateTableTableManager
       );
 }
 
-typedef $$SyncStateTableProcessedTableManager =
+typedef $$SyncStatesTableProcessedTableManager =
     ProcessedTableManager<
       _$AppDatabase,
-      $SyncStateTable,
-      SyncStateData,
-      $$SyncStateTableFilterComposer,
-      $$SyncStateTableOrderingComposer,
-      $$SyncStateTableAnnotationComposer,
-      $$SyncStateTableCreateCompanionBuilder,
-      $$SyncStateTableUpdateCompanionBuilder,
-      (
-        SyncStateData,
-        BaseReferences<_$AppDatabase, $SyncStateTable, SyncStateData>,
-      ),
-      SyncStateData,
+      $SyncStatesTable,
+      SyncState,
+      $$SyncStatesTableFilterComposer,
+      $$SyncStatesTableOrderingComposer,
+      $$SyncStatesTableAnnotationComposer,
+      $$SyncStatesTableCreateCompanionBuilder,
+      $$SyncStatesTableUpdateCompanionBuilder,
+      (SyncState, BaseReferences<_$AppDatabase, $SyncStatesTable, SyncState>),
+      SyncState,
       PrefetchHooks Function()
     >;
 typedef $$AppSettingsTableCreateCompanionBuilder =
@@ -11329,8 +11326,8 @@ class $AppDatabaseManager {
       $$OdometerChecksTableTableManager(_db, _db.odometerChecks);
   $$RemindersTableTableManager get reminders =>
       $$RemindersTableTableManager(_db, _db.reminders);
-  $$SyncStateTableTableManager get syncState =>
-      $$SyncStateTableTableManager(_db, _db.syncState);
+  $$SyncStatesTableTableManager get syncStates =>
+      $$SyncStatesTableTableManager(_db, _db.syncStates);
   $$AppSettingsTableTableManager get appSettings =>
       $$AppSettingsTableTableManager(_db, _db.appSettings);
 }

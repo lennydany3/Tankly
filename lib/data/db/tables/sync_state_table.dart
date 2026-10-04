@@ -4,7 +4,7 @@ import 'package:drift/drift.dart';
 ///
 /// Nothing here is synced: it describes this phone's relationship with the
 /// server, and a second device has its own.
-class SyncState extends Table {
+class SyncStates extends Table {
   @override
   String get tableName => 'sync_state';
 
