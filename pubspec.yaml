@@ -57,6 +57,17 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # Both families are variable fonts. Weight is selected at runtime through
+  # `fontVariations: [FontVariation('wght', …)]`, which is why the weight is
+  # not declared per-asset here. See lib/theme/tankly_type.dart.
+  fonts:
+    - family: SpaceGrotesk
+      fonts:
+        - asset: assets/fonts/SpaceGrotesk.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
