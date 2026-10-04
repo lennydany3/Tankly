@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../data/demo_data.dart';
-import '../../domain/fuel.dart';
-import '../../design/controls.dart';
-import '../../design/data_display.dart';
-import '../../design/dialogs.dart';
-import '../../design/fuel_gauge.dart';
-import '../../design/surfaces.dart';
-import '../../theme/tankly_palette.dart';
-import '../../theme/tankly_tokens.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/domain/fuel/fuel_engine.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/design/controls.dart';
+import 'package:tankly/design/data_display.dart';
+import 'package:tankly/design/dialogs.dart';
+import 'package:tankly/design/fuel_gauge.dart';
+import 'package:tankly/design/surfaces.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/domain/models/trip.dart';
 
 /// Review the numbers before the ride is written to the log.
 class FinishRideScreen extends StatefulWidget {

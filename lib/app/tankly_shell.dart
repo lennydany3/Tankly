@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-import '../data/demo_data.dart';
-import '../design/controls.dart';
-import '../design/tankly_nav_bar.dart';
-import '../screens/home/home_screen.dart';
-import '../screens/live/live_trip_screen.dart';
-import '../screens/settings/account_screen.dart';
-import '../screens/settings/settings_screen.dart';
-import '../screens/tabs/fuel_screen.dart';
-import '../screens/tabs/reminders_screen.dart';
-import '../screens/tabs/stats_screen.dart';
-import '../screens/tabs/trips_screen.dart';
-import '../screens/trip_detail/trip_detail_screen.dart';
-import '../theme/tankly_palette.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/design/controls.dart';
+import 'package:tankly/design/tankly_nav_bar.dart';
+import 'package:tankly/screens/home/home_screen.dart';
+import 'package:tankly/screens/live/live_trip_screen.dart';
+import 'package:tankly/screens/settings/account_screen.dart';
+import 'package:tankly/screens/settings/settings_screen.dart';
+import 'package:tankly/screens/tabs/fuel_screen.dart';
+import 'package:tankly/screens/tabs/reminders_screen.dart';
+import 'package:tankly/screens/tabs/stats_screen.dart';
+import 'package:tankly/screens/tabs/trips_screen.dart';
+import 'package:tankly/screens/trip_detail/trip_detail_screen.dart';
+import 'package:tankly/theme/tankly_palette.dart';
 
 /// Bottom-nav shell. Four destinations plus a centred primary action.
 class TanklyShell extends StatefulWidget {

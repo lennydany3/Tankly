@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../data/demo_data.dart';
-import '../../design/controls.dart';
-import '../../design/inputs.dart';
-import '../../design/surfaces.dart';
-import '../../domain/fuel.dart';
-import '../../theme/tankly_palette.dart';
-import '../../theme/tankly_tokens.dart';
-import '../../theme/tankly_type.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/design/controls.dart';
+import 'package:tankly/design/inputs.dart';
+import 'package:tankly/design/surfaces.dart';
+import 'package:tankly/domain/fuel/fuel_engine.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// Add or edit a refuel.
 ///

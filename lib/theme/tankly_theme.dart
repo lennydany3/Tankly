@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'tankly_palette.dart';
-import 'tankly_tokens.dart';
-import 'tankly_type.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// Material 3 themes for Tankly. Dark is primary; light is a secondary
 /// variant with accessible fuel hues.

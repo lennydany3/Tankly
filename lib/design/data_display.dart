@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../data/models.dart';
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_tokens.dart';
-import '../theme/tankly_type.dart';
-import 'route_map.dart';
-import 'surfaces.dart';
+import 'package:tankly/data/models.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
+import 'package:tankly/design/route_map.dart';
+import 'package:tankly/design/surfaces.dart';
 
 /// Label above a value and a unit. The workhorse of the Home and detail rows.
 class StatTile extends StatelessWidget {

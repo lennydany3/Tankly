@@ -2,8 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
 
 /// Stylised dark map used wherever a real tile layer is not wired up yet.
 ///

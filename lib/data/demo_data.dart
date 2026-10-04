@@ -2,8 +2,11 @@ import 'dart:ui' show Offset;
 
 import 'package:flutter/material.dart' show Icons;
 
-import '../domain/fuel.dart';
-import 'models.dart';
+import 'package:tankly/domain/fuel/fuel_engine.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/domain/models/trip.dart';
+import 'package:tankly/domain/models/vehicle.dart';
+import 'package:tankly/data/models.dart';
 
 /// Single source of truth for every number and label in the prototype.
 ///

@@ -2,10 +2,10 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../domain/fuel.dart';
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_tokens.dart';
-import '../theme/tankly_type.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// Slow breathing loop for critical fuel. Never a flash.
 class Pulse extends StatefulWidget {

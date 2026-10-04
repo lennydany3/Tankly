@@ -2,10 +2,10 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_tokens.dart';
-import '../theme/tankly_type.dart';
-import 'surfaces.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
+import 'package:tankly/design/surfaces.dart';
 
 /// Chart chrome: title, hero value, caption, then the plot.
 class ChartCard extends StatelessWidget {

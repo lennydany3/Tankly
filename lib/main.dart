@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'app/gallery.dart';
-import 'app/tankly_shell.dart';
-import 'screens/onboarding/onboarding_screens.dart';
-import 'theme/tankly_theme.dart';
+import 'package:tankly/app/gallery.dart';
+import 'package:tankly/app/tankly_shell.dart';
+import 'package:tankly/screens/onboarding/onboarding_screens.dart';
+import 'package:tankly/theme/tankly_theme.dart';
 
 void main() => runApp(const TanklyApp());
 

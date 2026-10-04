@@ -2,8 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_type.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// The Tankly mark: a droplet cradling a gauge arc.
 ///

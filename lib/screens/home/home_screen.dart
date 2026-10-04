@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-import '../../data/demo_data.dart';
-import '../../data/models.dart';
-import '../../design/controls.dart';
-import '../../design/data_display.dart';
-import '../../design/fuel_gauge.dart';
-import '../../design/surfaces.dart';
-import '../../design/tankly_brand.dart';
-import '../../domain/fuel.dart';
-import '../../theme/tankly_palette.dart';
-import '../../theme/tankly_tokens.dart';
-import '../../theme/tankly_type.dart';
-import '../forms/refuel_form_screen.dart';
-import '../sheets/correction_sheets.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/data/models.dart';
+import 'package:tankly/design/controls.dart';
+import 'package:tankly/design/data_display.dart';
+import 'package:tankly/design/fuel_gauge.dart';
+import 'package:tankly/design/surfaces.dart';
+import 'package:tankly/design/tankly_brand.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
+import 'package:tankly/screens/forms/refuel_form_screen.dart';
+import 'package:tankly/screens/sheets/correction_sheets.dart';
 
 /// Home. One hero, the fuel gauge, and everything else in service of it.
 ///

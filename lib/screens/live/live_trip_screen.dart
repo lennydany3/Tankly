@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../data/demo_data.dart';
-import '../../data/models.dart';
-import '../../design/fuel_gauge.dart';
-import '../../design/route_map.dart';
-import '../../domain/fuel.dart';
-import '../../theme/tankly_palette.dart';
-import '../../theme/tankly_tokens.dart';
-import '../../theme/tankly_type.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/data/models.dart';
+import 'package:tankly/design/fuel_gauge.dart';
+import 'package:tankly/design/route_map.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// Live Trip. Pure black in dark theme, white in light — maximum contrast for
 /// a handlebar mount in direct sun.

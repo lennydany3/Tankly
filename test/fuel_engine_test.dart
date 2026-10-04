@@ -1,5 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tankly/domain/fuel.dart';
+import 'package:tankly/domain/fuel/fuel_engine.dart';
+import 'package:tankly/domain/fuel/mileage_learner.dart';
+import 'package:tankly/domain/models/fuel.dart';
+import 'package:tankly/domain/models/vehicle.dart';
+import 'package:tankly/domain/models/trip.dart';
 
 /// The worked example from `docs/Design.md`, which the whole UI hangs off.
 ///

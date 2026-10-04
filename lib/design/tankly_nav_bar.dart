@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_tokens.dart';
-import '../theme/tankly_type.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// The five tabs. Active tab gets an accent icon, label and a soft pill.
 class TanklyNavBar extends StatelessWidget {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../data/demo_data.dart';
-import '../theme/tankly_palette.dart';
-import '../theme/tankly_tokens.dart';
-import '../theme/tankly_type.dart';
-import 'controls.dart';
-import 'data_display.dart';
-import 'surfaces.dart';
-import 'tankly_brand.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
+import 'package:tankly/design/controls.dart';
+import 'package:tankly/design/data_display.dart';
+import 'package:tankly/design/surfaces.dart';
+import 'package:tankly/design/tankly_brand.dart';
 
 /// Every destructive action goes through this. Never a bare red button.
 class DeleteConfirmDialog extends StatelessWidget {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../data/demo_data.dart';
-import '../../data/models.dart';
-import '../../design/data_display.dart';
-import '../../design/surfaces.dart';
-import '../forms/refuel_form_screen.dart';
-import '../../theme/tankly_palette.dart';
-import '../../theme/tankly_tokens.dart';
-import '../../theme/tankly_type.dart';
+import 'package:tankly/data/demo_data.dart';
+import 'package:tankly/data/models.dart';
+import 'package:tankly/design/data_display.dart';
+import 'package:tankly/design/surfaces.dart';
+import 'package:tankly/screens/forms/refuel_form_screen.dart';
+import 'package:tankly/theme/tankly_palette.dart';
+import 'package:tankly/theme/tankly_tokens.dart';
+import 'package:tankly/theme/tankly_type.dart';
 
 /// Refuel log. The list that drives the estimate and teaches mileage.
 class FuelScreen extends StatelessWidget {
